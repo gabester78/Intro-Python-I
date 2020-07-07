@@ -30,20 +30,3 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
-
-
-def calendario(month=None, year=None, *args):
-    '''Returns a calendar for the current month if no arguments passed;
-        If one argument passed, returns a calendar for that argument;
-        If two arguments passed, returns a calendar for the month and year.
-        '''
-    if len(args):
-        return print('''Returns a calendar for the current month if no arguments passed;
-        If one argument passed, returns a calendar for that argument;
-        If two arguments passed, returns a calendar for the month and year.
-        ''')
-    if month and year:
-        return calendar.prmonth(year, month)
-    if month:
-        return calendar.prmonth(datetime.date.today().year, month)
-    return calendar.prmonth(datetime.date.today().year, datetime.date.today().month)
